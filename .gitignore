@@ -1,0 +1,34 @@
+# Local system and editor files
+.DS_Store
+._*
+.vscode/
+.idea/
+
+# Local secrets and Python caches
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+
+# Working notes, generated prompts and extracted frames
+/README.txt
+/SEO-심화-가이드.md
+/SEO-배포전-설정.txt
+/frame1.jpg
+/frame2.jpg
+/frames.jpg
+/assets/feature-image-prompts.txt
+/assets/exterior-mosaic-prompt.txt
+
+# Unused source images and duplicate preview image
+/assets/hall-wide.webp
+/assets/dining-2.webp
+/assets/counter.webp
+/assets/exterior.webp
+/assets/group.webp
+/assets/social-preview.jpg
+
+# macOS filename normalization
+/SEO-심화-가이드.md
+/SEO-배포전-설정.txt
