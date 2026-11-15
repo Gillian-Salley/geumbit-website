@@ -79,6 +79,44 @@ h1,h2,h3,.brand{font-family:var(--serif);font-weight:700}
 @media(max-width:767px){
  body,.body-copy,.hero-desc,.hero-note,.btn,.nav a,.feature p,.story-strip span,.menu-tabs button,.menu-row b,.menu-row small,.menu-row .amount,.menu-row .menu-description,.menu-meta,.menu-board-link,.amenity span,.visit-line strong,.video-caption,.footer p,.footer .minor,.nutrition p,.nutrition small,.faq-grid details p,.eyebrow,.feature-num,figcaption,.gallery-grid figcaption,.design-contact,.fixed-reservation a{font-size:1rem}
 }
+
+/* Approved opening-event popup: isolated from page typography and layout. */
+.event-popup{--ep-green:#193f34;--ep-ivory:#fffcf7;--ep-gold:#ffc436;--ep-ochre:#87601f;--ep-charcoal:#20211e;border:0;padding:0;margin:clamp(24px,8vh,80px) auto auto;max-width:none;max-height:calc(100dvh - 48px);overflow:auto;color:var(--ep-ivory);font-family:var(--sans);line-height:1.3;letter-spacing:-.03em}
+.event-popup:not([open]){display:none!important}.event-popup::backdrop{background:rgba(0,0,0,.55)}
+.event-popup button{font:inherit;cursor:pointer;border:0;border-radius:0;color:inherit;background:transparent}.event-popup h2.ep-title{font-size:50px}.event-popup .ep-offer h2{font-size:25px}.event-popup .ep-amount{font-size:70px}.event-popup .ep-discount{font-size:38px}
+.event-popup{width:min(720px,calc(100% - 32px));background:var(--ep-green)}
+.ep-banner{position:relative;padding:28px 32px 24px}
+.ep-frame{border:1px solid var(--ep-gold);padding:0 26px 20px}
+.ep-brand-row{display:flex;align-items:center;gap:16px;margin:-16px 0 20px}
+.ep-brand-row:before,.ep-brand-row:after{content:'';height:1px;background:var(--ep-gold);flex:1}
+.ep-brand{display:flex;align-items:center;gap:5px;background:var(--ep-green);padding:0 6px;white-space:nowrap;font-family:'Noto Serif KR',serif;font-weight:700;font-size:30px}
+.ep-brand img{width:57px;height:auto;display:block}
+.ep-close-top{position:absolute;right:42px;top:43px;width:36px;height:36px;display:grid;place-items:center;font-size:32px;line-height:1}
+.event-popup h2.ep-title{font-family:'Noto Serif KR',serif;font-size:clamp(30px,5.2vw,66px);font-weight:700;text-align:center;letter-spacing:-.04em;margin:20px 0 12px;line-height:1.3}
+.event-popup h2.ep-title span{color:var(--ep-gold)}
+.ep-tagline{text-align:center;font-size:clamp(14px,2.3vw,24px);margin:0 0 23px}
+.ep-period{display:flex;align-items:center;justify-content:center;gap:20px;max-width:650px;margin:0 auto 24px}
+.ep-period:before,.ep-period:after{content:'';height:1px;flex:1;background:var(--ep-gold)}
+.ep-period strong{border:2px solid var(--ep-gold);border-radius:100px;padding:6px 23px;font-size:clamp(18px,2.8vw,28px);white-space:nowrap}
+.ep-offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ep-offer{background:var(--ep-ivory);border:1px solid var(--ep-gold);padding:14px 12px 18px;text-align:center;color:var(--ep-green)}
+.ep-offer h2{margin:0 0 15px;padding:8px 2px;background:var(--ep-green);color:var(--ep-ivory);font-family:'Noto Serif KR',serif;font-size:clamp(17px,2.8vw,30px);font-weight:700}
+.ep-amount{font-family:'Noto Serif KR',serif;display:flex;align-items:baseline;justify-content:center;gap:1px;white-space:nowrap;color:var(--ep-ochre);font-size:clamp(46px,8.5vw,92px);font-weight:700;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.065em;line-height:1.15}
+.ep-amount small{font-size:.38em;letter-spacing:-.03em}
+.ep-discount{font-family:'Noto Serif KR',serif;display:block;margin-top:3px;font-size:clamp(25px,4.5vw,45px);font-weight:700}
+.ep-message{display:flex;align-items:center;justify-content:center;gap:16px;margin:20px 0 0;text-align:center;font-size:clamp(14px,2.3vw,23px);font-weight:600}
+.ep-message:before,.ep-message:after{content:'';height:1px;background:var(--ep-gold);flex:1;min-width:10px}
+.ep-controls{display:flex;align-items:center;justify-content:space-between;background:var(--ep-charcoal);border-top:1px solid var(--ep-ivory);padding:8px 20px;gap:12px}
+.ep-controls button{min-height:44px;font-size:16px;padding:8px 6px}
+
+
+@media(max-width:600px){.ep-banner{padding:24px 12px 16px}.ep-frame{padding:0 10px 16px}.ep-brand-row{gap:6px;margin-bottom:26px}.ep-brand{font-size:22px;padding:0 2px;gap:4px}.ep-brand img{width:43px}.ep-close-top{top:53px;right:18px;width:28px;height:28px;font-size:26px}.event-popup h2.ep-title{font-size:clamp(26px,6.6vw,38px);margin-top:10px}.ep-tagline{font-size:14px;margin-bottom:18px}.ep-period{gap:10px;margin-bottom:18px}.ep-period strong{padding:6px 12px;font-size:18px}.ep-offers{gap:6px}.ep-offer{padding:9px 4px 12px}.ep-offer h2{font-size:clamp(14px,3.7vw,20px);padding:7px 1px;margin-bottom:12px}.ep-amount{font-size:clamp(32px,9.2vw,54px)}.ep-discount{font-size:clamp(22px,5.8vw,30px)}.ep-message{gap:6px;font-size:14px;margin-top:18px}.ep-controls{padding:5px 12px}.ep-controls button{font-size:14px}}
+
+.event-popup h2.ep-title{font-size:50px;margin:20px 0 12px}.event-popup .ep-tagline{font-size:20px}.event-popup .ep-period strong{font-size:24px}.event-popup .ep-offer h2{font-size:25px}.event-popup .ep-amount{font-size:70px}.event-popup .ep-discount{font-size:38px}.event-popup .ep-message{font-size:18px}.event-popup .ep-amount small{font-size:.38em}.event-popup .ep-controls button{min-height:44px}
+@media(max-width:600px){.event-popup{margin:calc(16px + env(safe-area-inset-top,0px)) auto auto;max-height:calc(100dvh - 32px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))}.event-popup h2.ep-title{font-size:clamp(24px,6.4vw,38px)}.event-popup .ep-tagline{font-size:14px}.event-popup .ep-period strong{font-size:18px}.event-popup .ep-offer h2{font-size:clamp(13px,3.7vw,20px)}.event-popup .ep-amount{font-size:clamp(28px,9.2vw,54px)}.event-popup .ep-discount{font-size:clamp(22px,5.8vw,30px)}.event-popup .ep-message{font-size:14px}}
+
+.event-popup .ep-offer:first-child .ep-amount{font-size:60px}
+@media(max-width:600px){.event-popup .ep-offer:first-child .ep-amount{font-size:clamp(23px,7.4vw,42px)}}
 </style>
 <meta content="telephone=yes" name="format-detection"/><meta content="light" name="color-scheme"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="금빛흑염소 로고와 실제 상차림" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/></head>
 <body>
@@ -95,6 +133,24 @@ h1,h2,h3,.brand{font-family:var(--serif);font-weight:700}
 <footer class="footer"><div class="container footer-inner"><div><b>금빛흑염소</b><p>경남 김해시 외동 1034-4<br/>전화 055-331-8306<br/>영업 11:00–21:00 · 라스트오더 20:00 · 매주 화요일 휴무</p></div><div class="footer-meta"><p class="minor">© <span id="year"></span> 금빛흑염소. All rights reserved.<br/>상호: 금빛흑염소 · 대표: 김재호<br/>사업자등록번호: 515-11-08359</p><div class="design-contact"><span>디자인·웹사이트 제작 문의</span><div class="design-contact-links"><a href="mailto:giryeong0916@gmail.com" aria-label="디자인 문의 이메일 보내기">이메일 ↗</a><a href="https://app.notion.com/p/3a6bc63c9c93809ead5adb727fc9e9ce?source=copy_link" target="_blank" rel="noopener noreferrer" aria-label="디자인 포트폴리오 새 탭에서 보기">포트폴리오 ↗</a></div></div></div></div></footer>
 </div>
 <div aria-label="빠른 예약" class="fixed-reservation"><a aria-label="금빛흑염소 전화문의" href="tel:0553318306"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.6 19.6 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.7L7.1 10a16 16 0 0 0 6.9 6.9l1.6-1.9a2 2 0 0 1 1.7-.6l3 .5a2 2 0 0 1 1.7 2z"></path></svg>전화문의</a><a aria-label="네이버 예약" href="" id="naver-booking"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg>네이버 예약</a></div>
+<dialog class="event-popup" id="event-popup" aria-labelledby="event-title">
+ <div class="ep-banner">
+  <div class="ep-frame">
+   <div class="ep-brand-row"><div class="ep-brand"><img src="assets/geumbit_logo.svg" alt="">금빛흑염소</div></div>
+   <button class="ep-close-top" type="button" aria-label="팝업 닫기" data-event-close>×</button>
+   <h2 class="ep-title" id="event-title">오픈 기념 <span>특별 혜택</span></h2>
+   <p class="ep-tagline">정성 가득한 한 끼, 더 반가운 가격으로</p>
+   <div class="ep-period"><strong>2026. 11. 30까지</strong></div>
+   <div class="ep-offers">
+    <article class="ep-offer"><h2>흑염소탕</h2><div class="ep-amount">2,000<small>원</small></div><span class="ep-discount">할인</span></article>
+    <article class="ep-offer"><h2>세트메뉴</h2><div class="ep-amount">5<small>%</small></div><span class="ep-discount">할인</span></article>
+    <article class="ep-offer"><h2>단품메뉴</h2><div class="ep-amount">10<small>%</small></div><span class="ep-discount">할인</span></article>
+   </div>
+   <p class="ep-message"><span>절호의 찬스! 놓치지 말고 받아가세요~</span></p>
+  </div>
+ </div>
+ <div class="ep-controls"><button type="button" data-event-hide-today>오늘 하루 보지 않기</button><button type="button" data-event-close>닫기 ×</button></div>
+</dialog>
 <dialog class="lightbox" id="menu-dialog"><button aria-label="메뉴판 닫기" id="menu-dialog-close">×</button><img alt="금빛흑염소 매장 실제 전체 메뉴판" src="assets/menu-board.webp"/></dialog>
 <script>
 // 네이버 예약 페이지가 만들어지면 URL을 여기에 입력하세요.
@@ -115,5 +171,19 @@ document.getElementById('menu-board-open').addEventListener('click',()=>document
 document.getElementById('menu-dialog-close').onclick=()=>document.getElementById('menu-dialog').close();
 document.getElementById('menu-dialog').addEventListener('click',e=>{if(e.target.id==='menu-dialog')e.target.close()});
 document.getElementById('year').textContent=new Date().getFullYear();
+
+// Opening event ends at midnight in Korea; dismissals are scoped to this campaign.
+(()=>{
+ const popup=document.getElementById('event-popup');
+ const campaign='geumbit-opening-20261130';
+ const today=()=>new Date(Date.now()+9*60*60*1000).toISOString().slice(0,10);
+ const read=(storage,key)=>{try{return window[storage].getItem(key)}catch{return null}};
+ const write=(storage,key,value)=>{try{window[storage].setItem(key,value)}catch{}};
+ const active=Date.now()<Date.parse('2026-12-01T00:00:00+09:00');
+ popup.querySelectorAll('[data-event-close]').forEach(button=>button.addEventListener('click',()=>popup.close()));
+ popup.querySelector('[data-event-hide-today]').addEventListener('click',()=>{write('localStorage',campaign+'-hidden',today());popup.close()});
+ popup.addEventListener('close',()=>write('sessionStorage',campaign+'-closed',today()));
+ if(active&&read('localStorage',campaign+'-hidden')!==today()&&read('sessionStorage',campaign+'-closed')!==today())popup.showModal();
+})();
 </script>
 </body></html>
